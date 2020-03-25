@@ -1,11 +1,6 @@
 package com.hotel.ena.models;
 
 
-
-
-
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 
@@ -32,80 +27,45 @@ import java.util.ArrayList;
 
 import java.util.List;
 
-
-
-
-
-
-
 @Component
 
-
-
 public class Podaci {
-
-
-
-
-
-
 
     private RacunRepository racunRepozitorij;
 
 
     @Autowired
-
-
-
     public Podaci(RacunRepository racunRepozitorij) {
-
-
 
         this.racunRepozitorij = racunRepozitorij;
 
-
-
     }
-
-
-
-
-
 
 
     @EventListener
 
 
-
-    public void dodaj (ApplicationReadyEvent event){
-
-
+    public void dodaj(ApplicationReadyEvent event) {
 
         dodajRacune();
     }
 
 
-
-
-
-
-
     private void dodajRacune() {
-
 
 
         RacunEntity racun = new RacunEntity();
 
-        
 
-       racun.setCreatedBy("Amina");
-       racun.setCost(1000);
-       racun.setPaid(false);
-       racun.setCreated("2020-09-08");
-       
+        racun.setCreatedBy("Amina");
+        racun.setCost(1000);
+        racun.setPaid(false);
+        racun.setCreated("2020-09-08");
+
         racunRepozitorij.save(racun);
 
-        }
+    }
+}
 
       
 
