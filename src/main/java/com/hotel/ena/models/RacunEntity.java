@@ -52,7 +52,7 @@ private Boolean paid;
     public void setUserId(final String userId){
         this.userId = userId;
     }
-  public String getReservationId() {
+    public String getReservationId() {
         return this.reservationId;
     }
 
