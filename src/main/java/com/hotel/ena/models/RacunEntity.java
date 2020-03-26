@@ -14,7 +14,8 @@ import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-
+import javax.validation.constraints.AssertTrue;
+import javax.validation.constraints.NotNull;
 
 
 @Entity
@@ -27,12 +28,23 @@ public class RacunEntity implements Serializable {
     @SequenceGenerator(name = "Racun_ID_GENERATOR", sequenceName = "Racun_SEQ",
              allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "Racun_ID_GENERATOR")
+
+    @NotNull
     private Long id;
+
+    @NotNull
     private String user_id;
+    @NotNull
     private String createdBy;
+    @NotNull
     private String created;
+
+    @NotNull
     private double cost;
+    @NotNull
     private String reservation_id;
+
+    @AssertTrue
     private Boolean paid;
 
     public RacunEntity() {
