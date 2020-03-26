@@ -30,5 +30,5 @@ public interface RacunRepository extends JpaRepository<RacunEntity, Long> {
     List<RacunEntity> findRacun(@Param("user_id") String user_id);
 
 
-
+    boolean existsByIDRacuna(String id);
 }
