@@ -1,8 +1,10 @@
-package ba.com.zira.template.dao.model.translation;
-
+//package ba.com.zira.template.dao.model.translation;
+package com.hotel.ena.models;
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalDateTime;
+import java.math.BigDecimal;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,13 +28,12 @@ public class RacunEntity implements Serializable {
              allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "Racun_ID_GENERATOR")
     private Long id;
-
-   private String user_id;
-private String createdBy;
-private Date created;
-private BigDecimal cost;
-private String reservation_id;
-private Boolean paid;
+    private String user_id;
+    private String createdBy;
+    private String created;
+    private double cost;
+    private String reservation_id;
+    private Boolean paid;
 
     public RacunEntity() {
     }
@@ -46,29 +47,29 @@ private Boolean paid;
     }
 
     public String getUserId() {
-        return this.userId;
+        return this.user_id;
     }
 
     public void setUserId(final String userId){
-        this.userId = userId;
+        this.user_id = userId;
     }
     public String getReservationId() {
-        return this.reservationId;
+        return this.reservation_id;
     }
 
     public void setReservationId(final String reservationId){
-        this.reservationId = reservationId;
+        this.reservation_id = reservationId;
     }
 
- public Date getCreated() {
+    public String getCreated() {
         return this.created;
     }
 
-    public void setCreated(final Date created){
+    public void setCreated(final String created){
         this.created = created;
     }
 
-public String getCreatedBy() {
+    public String getCreatedBy() {
         return this.createdBy;
     }
 
@@ -76,15 +77,15 @@ public String getCreatedBy() {
         this.createdBy = createdBy;
     }
 
-public BigDecimal getCost() {
+    public double getCost() {
         return this.cost;
     }
 
-    public void setCost(final BigDecimal cost){
+    public void setCost(final double cost){
         this.cost = cost;
     }
 
-public Boolean getPaid() {
+    public Boolean getPaid() {
         return this.paid;
     }
 
@@ -92,6 +93,6 @@ public Boolean getPaid() {
         this.paid = paid;
     }
 
-   
+
 
 }

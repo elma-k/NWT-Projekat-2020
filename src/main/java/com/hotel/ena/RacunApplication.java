@@ -4,9 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HotelEnaApplication {
+
+
+public class RacunApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HotelEnaApplication.class, args);
+		SpringApplication.run(RacunApplication.class, args);
 	}
 }
+
